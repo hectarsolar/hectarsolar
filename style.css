@@ -232,3 +232,141 @@ footer {
     animation: none;
   }
 }
+/* =========================
+   Navigation
+========================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--muted);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   Sunlight Glow
+========================= */
+
+.sun-glow {
+  position: fixed;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 209, 102, 0.35),
+    transparent 70%
+  );
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -2;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+/* =========================
+   Floating Leaves (Parallax)
+========================= */
+
+.leaves {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.leaves.far .leaf {
+  opacity: 0.25;
+  animation-duration: 40s, 14s;
+  filter: blur(0.5px);
+}
+
+.leaves.near .leaf {
+  opacity: 0.4;
+  animation-duration: 22s, 7s;
+}
+
+.leaf {
+  position: absolute;
+  top: -15%;
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle at 30% 30%, #9be7b0, #4caf6d);
+  border-radius: 60% 40% 60% 40%;
+  animation: fall linear infinite, sway ease-in-out infinite;
+}
+
+.leaf:nth-child(1) { left: 10%; }
+.leaf:nth-child(2) { left: 35%; width: 22px; height: 22px; }
+.leaf:nth-child(3) { left: 55%; width: 34px; height: 34px; }
+.leaf:nth-child(4) { left: 75%; width: 20px; height: 20px; }
+
+/* Motion */
+@keyframes fall {
+  from { transform: translateY(-10vh); }
+  to { transform: translateY(120vh); }
+}
+
+@keyframes sway {
+  0%, 100% { margin-left: 0; }
+  50% { margin-left: 50px; }
+}
+
+/* =========================
+   Dark Mode (Night Garden)
+========================= */
+
+body.dark {
+  --bg: #0f1c16;
+  --card: #172922;
+  --text: #e6f4ec;
+  --muted: #a8cbb8;
+  --accent: #7bdba6;
+  background: linear-gradient(to bottom, #08130f, var(--bg));
+}
+
+body.dark .sun-glow {
+  opacity: 0.15;
+}
+
+/* =========================
+   Accessibility
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .leaf,
+  .sun-glow {
+    animation: none;
+  }
+}
