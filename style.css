@@ -140,209 +140,43 @@ footer {
     padding: 1.5rem;
   }
 }
-/* -------------------
-   Floating Leaves
-------------------- */
-
-.leaves {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.leaf {
-  position: absolute;
-  top: -10%;
-  width: 28px;
-  height: 28px;
-  background: radial-gradient(
-    circle at 30% 30%,
-    #9be7b0,
-    #4caf6d
-  );
-  border-radius: 60% 40% 60% 40%;
-  opacity: 0.35;
-  animation: fall linear infinite, sway ease-in-out infinite;
-}
-
-/* Individual leaf variation */
-.leaf:nth-child(1) {
-  left: 10%;
-  animation-duration: 18s, 6s;
-}
-
-.leaf:nth-child(2) {
-  left: 30%;
-  width: 22px;
-  height: 22px;
-  animation-duration: 22s, 7s;
-}
-
-.leaf:nth-child(3) {
-  left: 50%;
-  width: 34px;
-  height: 34px;
-  animation-duration: 26s, 8s;
-}
-
-.leaf:nth-child(4) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-duration: 20s, 6s;
-}
-
-.leaf:nth-child(5) {
-  left: 85%;
-  width: 26px;
-  height: 26px;
-  animation-duration: 24s, 7s;
-}
-
-/* Animations */
-@keyframes fall {
-  from {
-    transform: translateY(-10vh);
-  }
-  to {
-    transform: translateY(110vh);
-  }
-}
-
-@keyframes sway {
-  0% {
-    margin-left: 0;
-  }
-  50% {
-    margin-left: 40px;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-/* Accessibility: reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .leaf {
-    animation: none;
-  }
-}
 /* =========================
-   Navigation
+   Enhanced "What is Hectar Solar?" Section
 ========================= */
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1.5rem;
+.subtitle-main {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
 }
 
-.brand {
+.subtitle-description {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(76, 175, 109, 0.08) 0%, rgba(183, 228, 199, 0.08) 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--accent);
+  margin-top: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.subtitle-description::first-line {
   font-weight: 700;
   color: var(--accent);
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
+/* Dark mode support */
+body.dark .subtitle-description {
+  background: linear-gradient(135deg, rgba(123, 219, 166, 0.1) 0%, rgba(123, 219, 166, 0.05) 100%);
+  color: var(--text);
 }
-
-.nav-links a {
-  color: var(--muted);
-}
-
-#theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-/* =========================
-   Sunlight Glow
-========================= */
-
-.sun-glow {
-  position: fixed;
-  top: -120px;
-  right: -120px;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 209, 102, 0.35),
-    transparent 70%
-  );
-  animation: pulse 8s ease-in-out infinite;
-  pointer-events: none;
-  z-index: -2;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 0.55;
-  }
-}
-
-/* =========================
-   Floating Leaves (Parallax)
-========================= */
-
-.leaves {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.leaves.far .leaf {
-  opacity: 0.25;
-  animation-duration: 40s, 14s;
-  filter: blur(0.5px);
-}
-
-.leaves.near .leaf {
-  opacity: 0.4;
-  animation-duration: 22s, 7s;
-}
-
-.leaf {
-  position: absolute;
-  top: -15%;
-  width: 28px;
-  height: 28px;
-  background: radial-gradient(circle at 30% 30%, #9be7b0, #4caf6d);
-  border-radius: 60% 40% 60% 40%;
-  animation: fall linear infinite, sway ease-in-out infinite;
-}
-
-.leaf:nth-child(1) { left: 10%; }
-.leaf:nth-child(2) { left: 35%; width: 22px; height: 22px; }
-.leaf:nth-child(3) { left: 55%; width: 34px; height: 34px; }
-.leaf:nth-child(4) { left: 75%; width: 20px; height: 20px; }
-
-/* Motion */
-@keyframes fall {
-  from { transform: translateY(-10vh); }
-  to { transform: translateY(120vh); }
-}
-
-@keyframes sway {
-  0%, 100% { margin-left: 0; }
-  50% { margin-left: 50px; }
-}
-
 /* =========================
    Dark Mode (Night Garden)
 ========================= */
