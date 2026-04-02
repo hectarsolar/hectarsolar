@@ -1,7 +1,156 @@
-<header style="background-image: url('path-to-your-image.jpg'); background-size: cover; position: relative; padding: 50px 0; text-align: center;">
-    <img src="path-to-your-logo.png" alt="Logo" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 2;">
-    <h1 style="color: white; position: relative; z-index: 2;">Welcome to Hectarsolar</h1>
-    <p style="color: white; position: relative; z-index: 2;">Leading the way in solar technology</p>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hectar Solar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<!-- Keep existing content below the header unchanged -->
+<div class="sun-glow" aria-hidden="true"></div>
+
+<nav class="nav container">
+  <span class="brand">☀️ Hectar Solar</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</nav>
+
+  <header class="hero-banner">
+    <img src="images/banner.jpg" alt="Hectar Solar landscape" class="banner-image" />
+    <div class="hero-content container">
+      <img src="images/logo2.png" alt="Hectar Solar logo" class="logo-image" />
+      <h1>Hectar Solar</h1>
+      <p class="subtitle">Creating a solarpunk vision in Portugal</p>
+    </div>
+  </header>
+
+  <section class="container header-content">
+    <p class="subtitle">What is "Hectar Solar"?</p>
+    <p class="subtitle">Hectar Solar is a space of regeneration and reconnection for people who want to go back to a more rural lifestyle. Our mission is to establish a more sustainable and connected PRESENT and FUTURE.
+    For this, Hectar Solar represents a safe haven for people to become HUMAN again. It was born as an alternative to the current system of exploitation of both people and resources.
+    Our mission revolves around nurturing spaces of community and integration, where nature becomes part of the processes and people are allowed to be authentic and vulnerable.
+    We base ourselves on the concept of "solarpunk".
+    </p>
+  </section>
+
+  <div class="container layout">
+
+  <main class="container">
+    <section id="about">
+      <h2>Why solarpunk?</h2>
+      <p>
+         Solarpunk is an optimistic sci-fi art, literary, and social movement imagining sustainable, eco-friendly futures where humanity thrives in harmony with nature, powered by renewable energy and community-focused, post-capitalist values, contrasting dystopian cyberpunk with lush green cities, DIY ethics, and hopeful, nature-tech integration. It's about more than just aesthetics; it's a vision for real-world action, featuring rooftop gardens, local food, clean transport, and technologies seamlessly blending into nature, embodying hope and practical solutions over despair.
+      </p>
+    </section>
+
+      <section id="projects">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li>
+          <strong>Rural Co-Living</strong><br />
+          One of the main goals of the project will be to create the conditions for co-living, where people of all ages can stay and become part of the community.
+          The co-livers will contribute either financially or with their time, and will be involved in the activities held in the space.
+        </li>
+        <li>
+          <strong>Sustainable Food Systems</strong><br />
+          Food is one of the most important elements in life. One of our strategic goals is to create a sustainable source of food, with permaculture techniques and by establishing a healthy food forest.
+          The food produced in Hectar Solar will also be distributed in the area, with one of our goals being to establish a travelling grocery shop.
+          At the same time, all activities held in Hectar Solar will source food from the region, giving priority to locally grown food.
+        </li>
+        <li>
+          <strong>Handicrafts Knowledge Transfer</strong><br />
+          Traditions are an important part of the cultural heritage of the region. To honor and promote these traditions, we will host workshops held by the local artisans, so that they can share their skills and knowledge to younger generations, preserving the cultural identity and encouraging their sense of purpose and belonging to our project.
+        </li>
+         <li>
+          <strong>European and Regional Trainings</strong><br />
+          We believe both in a strong regional identity and also an unshakeable European belonging.
+          To further the strategic goals of the European Union, and to bring new dynamics and energy to the local reality, we will host Erasmus+ trainings and local workshops, shaping the community around Hectar Solar.
+        </li>
+      </ul>
+      </section>
+
+    <section class="collapsible-area container">
+  <h2>Learn More</h2>
+
+  <details class="solar-collapse">
+    <summary>🌱 Long-Term Vision</summary>
+    <p>
+      Hectar Solar aims to become a regenerative ecosystem combining food,
+      education, crafts, and shared living. The goal is not isolation,
+      but reconnection, building bridges between rural knowledge and modern tools.
+    </p>
+  </details>
+
+  <details class="solar-collapse">
+    <summary>🛠 Infrastructure Plans</summary>
+    <p>
+      We plan to integrate solar production, water reuse systems, low-impact
+      construction methods, and passive climate design suited to the Portuguese landscape.
+      <section>
+      <h2>🔨 Build plans</h2>
+
+      <ul class="checklist-items">
+        <li><input type="checkbox" /> Sun Room - The first habitable room</li>
+        <li><input type="checkbox" /> Outdoors Kitchen - A shared space for cooking</li>
+        <li><input type="checkbox" /> Sun Terrace - A terrace space for chilling and watching the mountains</li>
+        <li><input type="checkbox" /> Water Temple - The rainwater retaining system for our sustainable watery needs</li>
+        <li><input type="checkbox" /> Event Dome - A place for events and workshops</li>
+        <li><input type="checkbox" /> Indoors Toilet - For hygiene needs</li>
+        <li><input type="checkbox" /> Compost Throne - A compost toilet</li>
+        <li><input type="checkbox" /> Moon Room - The second habitable room</li>
+      </ul>
+    </section>
+    </p>
+  </details>
+
+  <details class="solar-collapse">
+    <summary>🤝 How to Participate</summary>
+    <p>
+      Future collaborators may join through residencies, volunteering,
+      Erasmus+ programs, or by contributing knowledge and practice to the space.
+    </p>
+  </details>
+
+</section>
+
+      <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:hectarsolar@gmail.com">hectarsolar@gmail.com</a><br />
+      </p>
+    </section>
+  </main>
+
+  <!-- RIGHT COLUMN -->
+  <aside class="checklist">
+    <section>
+      <h2>🌾 Roadmap</h2>
+
+      <ul class="checklist-items">
+        <li><input type="checkbox" checked /> Land secured</li>
+        <li><input type="checkbox" /> Create habitable conditions</li>
+        <li><input type="checkbox" /> Water systems</li>
+        <li><input type="checkbox" /> Electric systems</li>
+        <li><input type="checkbox" /> Solar infrastructure</li>
+        <li><input type="checkbox" /> First co-livers arrive</li>
+        <li><input type="checkbox" /> Food forest planted</li>
+        <li><input type="checkbox" /> First public workshop</li>
+      </ul>
+    </section>
+  </aside>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Hectar Solar</p>
+  </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
